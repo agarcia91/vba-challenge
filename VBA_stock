@@ -23,6 +23,8 @@ For Each ws In Worksheets
  
  
  ' Add values to variables
+ Ticker = " "
+ nextTicker = " "
  openprice = 0
  closeprice = 0
  yearlychange = 0
