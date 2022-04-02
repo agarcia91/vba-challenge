@@ -11,30 +11,29 @@ For Each ws In Worksheets
  ' Declare the variables
  Dim Ticker As String
  Dim nextTicker As String
- Dim stockvolume As Double
- Dim summaryrow As Integer
  Dim openprice As Double
  Dim closeprice As Double
  Dim yearlychange As Double
  Dim percentchange As Double
+ Dim stockvolume As Double
+ Dim summaryrow As Double
  Dim Lastrow As Long
  
  
  
  
  ' Add values to variables
- 
- stockvolume = 0
- summaryrow = 2
  openprice = 0
  closeprice = 0
  yearlychange = 0
  percentchange = 0
+ stockvolume = 0
+ summaryrow = 2
  
  Lastrow = Cells(Rows.Count, "A").End(xlUp).Row
  
  
- 'Headings
+ 'Headers
  ws.Range("I1").Value = "Ticker"
  ws.Range("J1").Value = "Yearly Change"
  ws.Range("K1").Value = "Percent Change"
@@ -85,6 +84,7 @@ ws.Cells(summaryrow, 11).Value = FormatPercent(ws.Cells(summaryrow, 11))
  ws.Cells(i, 10).Interior.ColorIndex = 4
  
  Else
+
 ws.Cells(i, 10).Interior.ColorIndex = 3
  
  
